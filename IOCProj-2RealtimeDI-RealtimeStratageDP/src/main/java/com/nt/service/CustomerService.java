@@ -29,7 +29,7 @@ public final class CustomerService implements ICustomerService {
        bo.setIntrest(intAmount);
        //use DAO
        int count = dao.insert(bo);
-       //terinary operator
+       //Terinary operator
        return count==1?"Sucessfully Registered....Intrest Amount is"+intAmount+"Total Pay after "+dto.getTime()+"Month is "+totalAmount:"Customer Registration Failed";
     }
 
