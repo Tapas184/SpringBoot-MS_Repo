@@ -10,7 +10,6 @@ import org.springframework.context.annotation.ImportResource;
 import com.nt.beans.TStudent;
 
 @SpringBootApplication
-//@ImportResource(locations = "com/nt/cfg/info.properties")
 public class SpringBootProject02StudentStrategyDpApplication {
 
 	public static void main(String[] args) {

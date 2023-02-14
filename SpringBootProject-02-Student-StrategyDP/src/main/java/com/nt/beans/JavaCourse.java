@@ -12,7 +12,7 @@ public class JavaCourse implements ICourseMaterials {
 	@Override
 	public String content() {
 		System.out.println("JavaCousrse.content()");
-		return "1. Core-Java, 2. OOPS, 3. Theading, 4. exception, 5. Collection";
+		return "1. Core-Java, 2. OOPS, 3. Theading, 4. exception, 5. Collection, ";
 	}//content
 
 	@Override

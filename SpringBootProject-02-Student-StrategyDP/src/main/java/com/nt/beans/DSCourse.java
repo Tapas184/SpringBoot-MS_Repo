@@ -12,7 +12,7 @@ public class DSCourse implements ICourseMaterials {
 	@Override
 	public String content() {
 		System.out.println("DSCousrse.content()");
-		return "1.Python, 2.Sclaer, 3.DS-Algorithum, 4.MicrosoftExcel";
+		return "1.Python, 2.Sclaer, 3.DS-Algorithum, 4.MicrosoftExcel, ";
 	}//content
 
 	@Override

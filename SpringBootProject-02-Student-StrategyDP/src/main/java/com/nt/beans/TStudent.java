@@ -3,9 +3,11 @@ package com.nt.beans;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.ImportResource;
 import org.springframework.stereotype.Component;
 
 @Component("student")
+@ImportResource("com/nt/cfg/applicationContext.xml")
 public final class TStudent {
 	
 	public TStudent() {
@@ -13,7 +15,7 @@ public final class TStudent {
 	}
 //data type interface
 	@Autowired
-	@Qualifier("java")
+	@Qualifier("dn")
 	public ICourseMaterials material;
 	
 	//b.logic
