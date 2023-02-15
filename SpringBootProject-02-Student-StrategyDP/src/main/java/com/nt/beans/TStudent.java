@@ -3,11 +3,9 @@ package com.nt.beans;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.ImportResource;
 import org.springframework.stereotype.Component;
 
 @Component("student")
-@ImportResource("com/nt/cfg/applicationContext.xml")
 public final class TStudent {
 	
 	public TStudent() {
@@ -24,6 +22,6 @@ public final class TStudent {
 		String course = material.content();
 		//price
 		double price = material.price();
-		System.out.println("For career preparation for "+career+" Material required "+material.content()+" Price is ::"+material.price());
+		System.out.println("For career preparation for "+career+" Material required "+course+" Price is ::"+price);
 	}//preparation
 }//class

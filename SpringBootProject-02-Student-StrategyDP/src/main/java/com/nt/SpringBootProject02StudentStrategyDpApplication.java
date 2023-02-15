@@ -10,6 +10,7 @@ import org.springframework.context.annotation.ImportResource;
 import com.nt.beans.TStudent;
 
 @SpringBootApplication
+@ImportResource("com/nt/cfg/applicationContext.xml")
 public class SpringBootProject02StudentStrategyDpApplication {
 
 	public static void main(String[] args) {
