@@ -3,10 +3,11 @@ package com.nt.bo;
 
 
 public class EmployeeBo {
-	private Integer empNo;
+	private int empNo;
 	private String ename;
-	private Double sal;
+	private double sal;
 	private String job;
+	
 	public Integer getEmpNo() {
 		return empNo;
 	}

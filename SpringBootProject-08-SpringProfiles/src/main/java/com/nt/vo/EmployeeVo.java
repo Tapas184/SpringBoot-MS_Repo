@@ -40,8 +40,8 @@ public class EmployeeVo {
 	}
 	@Override
 	public String toString() {
-		return "EmployeeVo [slNumber=" + slNumber + ", empNo=" + empNo + ", ename=" + ename + ", sal=" + sal + ", job="
-				+ job + "]";
+		return "EmployeeVo [slNumber=" + slNumber + ", empNo=" + empNo
+				+ ", ename=" + ename + ", sal=" + sal + ", job=" + job + "]";
 	}
-
+	
 }//class

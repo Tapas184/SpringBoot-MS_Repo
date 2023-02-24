@@ -21,38 +21,39 @@ public class EmployeeDaoImpl implements IEmployeeDao {
 	@Override
 	public List<EmployeeBo> getEmployeeByDesg(String cond) throws Exception {
 		List<EmployeeBo> listBo = null;
-		try(Connection con=ds.getConnection();//create connection pool with datasource
-				//create statement 
+		try (Connection con = ds.getConnection(); // create connection pool with
+													// datasource
+				// create statement
 				Statement st = con.createStatement();
-				//create result set and set to EmployeeBo
-				ResultSet rs =st.executeQuery(SELECT_QUERY+cond+" ORDER BY JOB");
-				) {
-			System.out.println(SELECT_QUERY+cond+" ORDER BY JOB");
+				// create result set and set to EmployeeBo
+				ResultSet rs = st
+						.executeQuery(SELECT_QUERY + cond + " ORDER BY JOB");) {
+			System.out.println(SELECT_QUERY + cond + " ORDER BY JOB");
 			listBo = new ArrayList();
-			EmployeeBo bo=null;
-			if(rs!=null) {
-			while(rs.next())
-				//create EmployeeBo class object
-				bo=new EmployeeBo();
-				bo.setEmpNo(rs.getInt(1));
-				bo.setEname(rs.getString(2));
-				bo.setSal(rs.getDouble(3));
-				bo.setJob(rs.getString(4));
-			
-			listBo.add(bo);
+			if (rs != null) {
+				EmployeeBo bo = null;
+				while (rs.next()) {
+					// create EmployeeBo class object
+					bo = new EmployeeBo();
+					bo.setEmpNo(rs.getInt(1));
+					bo.setEname(rs.getString(2));
+					bo.setSal(rs.getDouble(3));
+					bo.setJob(rs.getString(4));
+					listBo.add(bo);
+				} // while
 			}
-		}//try
-		catch(SQLException se) {
-			//exception for known exception
+		} // try
+		catch (SQLException se) {
+			// exception for known exception
 			se.printStackTrace();
 			throw se;
-		}//catch
-		catch(Exception e) {
-			//for unknown exception
+		} // catch
+		catch (Exception e) {
+			// for unknown exception
 			e.printStackTrace();
 			throw e;
 		}
 		return listBo;
-	}//mthod
+	}// mthod
 
-}//class
+}// class
