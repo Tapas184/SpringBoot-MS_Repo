@@ -1,5 +1,8 @@
 package com.nt.service;
 
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -36,6 +39,18 @@ public class CoronaMgmtService implements ICoronaVaccineMgmtService {
 	public boolean checkAval(long regNo) {
 		
 		return repo.existsById(regNo);
+	}
+	@Override
+	public Iterable<CoronaVacine> fatchAllDetails() {
+		return repo.findAll();
+	}
+	@Override
+	public Iterable<CoronaVacine> fatchAllDetailsByIds(List<Long> ids) {
+		return repo.findAllById(ids);
+	}
+	@Override
+	public Optional<CoronaVacine> fatchAllDetailsById(Long ids) {
+		return repo.findById(ids);
 	}
 
 }
