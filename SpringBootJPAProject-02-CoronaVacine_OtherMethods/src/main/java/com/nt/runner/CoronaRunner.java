@@ -73,6 +73,8 @@ public class CoronaRunner implements CommandLineRunner {
 							System.out.println(opt);
 						//opt.orElseThrow(()->new IllegalArgumentException("Vaccine not Found"));
 						System.out.println(opt.orElse(new CoronaVacine()));*/
+			System.out.println("============Delete Operation==============");
+			System.out.println(service.deleteAllById(1L));
 			
 		} catch (DataAccessException dae) {
 			dae.printStackTrace();

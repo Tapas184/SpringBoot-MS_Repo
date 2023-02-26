@@ -26,5 +26,8 @@ public interface ICoronaVaccineMgmtService {
 	
 	//working with optional method
 	public Optional<CoronaVacine> fatchAllDetailsById(Long ids);
+	
+	//working with delete Method
+	public String deleteAllById(Long id);
 
 }

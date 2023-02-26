@@ -52,5 +52,14 @@ public class CoronaMgmtService implements ICoronaVaccineMgmtService {
 	public Optional<CoronaVacine> fatchAllDetailsById(Long ids) {
 		return repo.findById(ids);
 	}
+	@Override
+	public String deleteAllById(Long id) {
+		Optional<CoronaVacine> opt = repo.findById(id);
+		if(opt.isPresent()) {
+			repo.deleteById(id);
+		return id+"Record deleted";
+		}
+		return "Record not found";
+	}
 
 }
