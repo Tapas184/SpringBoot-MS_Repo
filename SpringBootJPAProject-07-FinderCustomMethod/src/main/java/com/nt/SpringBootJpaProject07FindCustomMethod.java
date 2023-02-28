@@ -1,3 +1,4 @@
+//Static Projection...............
 package com.nt;
 
 import org.springframework.boot.SpringApplication;

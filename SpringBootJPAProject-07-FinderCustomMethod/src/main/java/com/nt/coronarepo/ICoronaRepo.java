@@ -10,14 +10,15 @@ import com.nt.entity.CoronaVacine;
 import com.nt.type.CustomeView;
 
 public interface ICoronaRepo extends JpaRepository<CoronaVacine, Long> {
-	//SELECT REG_NO,NAME,COMPANY,PRICE,COUNTRY,REQUIRED_DOSE_COUNT WHERE PRICE=?
+	// SELECT REG_NO,NAME,COMPANY,PRICE,COUNTRY,REQUIRED_DOSE_COUNT WHERE PRICE=?
 	public List<CoronaVacine> findByPrice(double price);
-	
-	//SELECT REG_NO,NAME,COMPANY,PRICE,COUNTRY,REQUIRED_DOSE_COUNT WHERE COUNTRY IN(?,?,?) AND COMPANY IN(?,?,?)
-	  // AND PRICE BETWEEN ? AND ?
+
+	// SELECT REG_NO,NAME,COMPANY,PRICE,COUNTRY,REQUIRED_DOSE_COUNT WHERE COUNTRY
+	// IN(?,?,?) AND COMPANY IN(?,?,?)
+	// AND PRICE BETWEEN ? AND ?
 	public List<CoronaVacine> findByCountryIn(List<String> country);
-	
-	//custome view 
+
+	// custome view
 	public List<CustomeView> findByPriceGreaterThanEqual(double price);
 
 }

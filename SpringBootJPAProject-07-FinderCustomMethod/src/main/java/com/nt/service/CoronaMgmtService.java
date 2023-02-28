@@ -33,6 +33,4 @@ public class CoronaMgmtService implements ICoronaVaccineMgmtService {
 		return repo.findByPriceGreaterThanEqual(price);
 	}
 
-
-
 }
