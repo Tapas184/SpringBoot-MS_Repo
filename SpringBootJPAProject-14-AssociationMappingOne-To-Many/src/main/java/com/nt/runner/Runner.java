@@ -40,14 +40,15 @@ public class Runner implements CommandLineRunner {
 		per.setContactDetails(phoneSet);
 		System.out.println(personService.savePhoneNumbers(phoneSet));*/
 		//=================Load Operation Parent to child======================
-		personService.fetchByPerson().forEach(Per->{
-			System.out.println("Parent::"+Per.getName());
-			Set<PhoneNumber> child = Per.getContactDetails();
-			child.forEach(chil->{
-				System.out.println("PhoneNumber :: "+chil);
-			});
-			
-		});
+		/*		personService.fetchByPerson().forEach(Per->{
+					System.out.println("Parent::"+Per.getName());
+					Set<PhoneNumber> child = Per.getContactDetails();
+					child.forEach(chil->{
+						System.out.println("PhoneNumber :: "+chil);
+					});
+					
+				});*/
+		System.out.println(personService.deletePhoneNumberByPersonId(102));
 	}//run(-)
 
 }//class

@@ -11,5 +11,7 @@ public interface IPersonManagementService {
 	public String savePhoneNumbers(Iterable<PhoneNumber> phone);
 	
 	public List<Person> fetchByPerson();
+	
+	public String deletePhoneNumberByPersonId(Integer personId);
 
 }//Interface

@@ -32,5 +32,19 @@ public class PersonService implements IPersonManagementService {
 	}@Override
 	public List<Person> fetchByPerson() {
 		return personRepo.findAll();
+	}//fetchByPerson
+	@Override
+	public String deletePhoneNumberByPersonId(Integer personId) {
+		//find person details by person id and keep in Opt collections
+		Optional<Person> opt = personRepo.findById(personId);
+		if(opt.isPresent()) {//if opt collection is not empty thrn
+			Set<PhoneNumber> child = opt.get().getContactDetails();
+			child.forEach(chil->{
+				chil.setPerson(null);
+			});
+			phoneRepo.deleteAll(child);
+			return child.size()+" no. of records are deleted of "+personId;
+		}
+		return personId+" Not Found";
 	}
 }
