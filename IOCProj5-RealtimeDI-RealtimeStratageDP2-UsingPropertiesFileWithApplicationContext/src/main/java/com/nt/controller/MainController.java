@@ -7,7 +7,7 @@ import com.nt.vo.CustomerVO;
 public class MainController {
     
     private ICustomerService service;
-
+//Using Constructor Injection of Service class
     public MainController(ICustomerService service) {
 	System.out.println("ICustomerService:: 1-Param Constructor");
 	this.service = service;

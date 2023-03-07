@@ -14,6 +14,7 @@ public class CustomerDAOImpl implements ICustomerDAO {
     private DataSource ds;
     PreparedStatement ps=null;
     // Constructor for Data source for every request a new DataSource object needs to be create
+    //Constructor Inject of Data Source
     public CustomerDAOImpl(DataSource ds) {
 	super();
 	this.ds = ds;

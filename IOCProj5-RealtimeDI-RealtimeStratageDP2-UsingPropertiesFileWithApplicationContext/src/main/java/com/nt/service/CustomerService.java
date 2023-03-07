@@ -8,7 +8,7 @@ public final class CustomerService implements ICustomerService {
     public ICustomerDAO dao; // HAS-Property
     
 
-
+//Using Constructor Injection
     public CustomerService(ICustomerDAO dao) {
 	System.out.println("ICustomerDAO :: 1-Param Constructr");
 	this.dao = dao;

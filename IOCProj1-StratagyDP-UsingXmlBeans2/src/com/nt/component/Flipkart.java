@@ -10,7 +10,7 @@ public final class Flipkart {
     public Flipkart() {
 	System.out.println("Flipkart :: 0-Param constructor");
     }//constructor
-
+//Setter Injection
     public void setCourior(Courior courior) {
 	System.out.println("Flipkart::setCourior(-)");
         this.courior = courior;
