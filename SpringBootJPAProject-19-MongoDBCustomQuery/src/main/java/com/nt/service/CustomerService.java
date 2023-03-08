@@ -32,4 +32,16 @@ public class CustomerService implements ICustomerService {
 	public List<Customer> fetchCustomerByAddOrBillRange(String add, double start, double end) {
 		return repo.selectCustomerByAddressOrBillRange(add, start, end);
 	}
+	@Override
+	public List<Customer> fetchCustomerByCharacter(String character) {
+		return repo.selectByCustomerByCharacter(character);
+	}
+	@Override
+	public List<Customer> fetchCustomerByNameAssending() {
+		return repo.sortCustomerByName();
+	}
+	@Override
+	public boolean fetchIsCustomerAvailabe(Integer cid) {
+		return repo.isCustomerAvailabe(cid);
+	}
 }

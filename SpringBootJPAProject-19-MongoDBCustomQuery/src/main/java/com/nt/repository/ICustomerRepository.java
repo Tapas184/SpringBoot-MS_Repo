@@ -24,6 +24,18 @@ public interface ICustomerRepository extends MongoRepository<Customer, String> {
 	//examples of or operator
 	@Query(fields ="{id:0,cId:1,cName:1,cAdd:1,cBillAmt:1,phoneNumber:1}", value = "{$or: [{cAdd:?0}, {cBillAmt: {$gte:?1, $lte:?2}}]}")
 	public List<Customer> selectCustomerByAddressOrBillRange(String add, double start, double end);
+	
+	//search by wild card character
+	@Query(fields = "{}",value = "{cAdd:{$regex:?0}}")
+	public List<Customer> selectByCustomerByCharacter(String str);
+	
+	//Sorting The customer details
+	@Query(value = "{}", sort = "{cName:1}")
+	public List<Customer> sortCustomerByName();
+	
+	//Exist method
+	@Query(value = "{cId:?0}", exists = true)
+	public boolean isCustomerAvailabe(Integer cid);
 
 }//Interface
 

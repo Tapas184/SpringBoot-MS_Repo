@@ -13,5 +13,11 @@ public interface ICustomerService {
 	public List<Customer> fetchCustomerByBillamountRange(double start, double end);
 	
 	public List<Customer> fetchCustomerByAddOrBillRange(String add, double start, double end);
+	
+	public List<Customer> fetchCustomerByCharacter(String character);
+	
+	public List<Customer> fetchCustomerByNameAssending();
+	
+	public boolean fetchIsCustomerAvailabe(Integer cid);
 
 }//Interface

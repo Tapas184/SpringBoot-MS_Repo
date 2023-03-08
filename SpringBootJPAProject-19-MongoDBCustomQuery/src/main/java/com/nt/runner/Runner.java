@@ -21,7 +21,15 @@ public class Runner implements CommandLineRunner {
 		//================Find By address=========================
 		//service.fetchCustomerByAddress("Odisha").forEach(System.out::println);
 		//service.fetchCustomerByBillamountRange(400.0, 1200.00).forEach(System.out::println);
-		service.fetchCustomerByAddOrBillRange("Odisha", 400.0, 1000.0).forEach(System.out::println);
+		//service.fetchCustomerByAddOrBillRange("Odisha", 400.0, 1000.0).forEach(System.out::println);
+		//service.fetchCustomerByCharacter("^K").forEach(System.out::println);
+		//service.fetchCustomerByNameAssending().forEach(System.out::println);
+		/*boolean output=service.fetchIsCustomerAvailabe(10);
+		if(output!=true) {
+		 System.out.println("Customer not availabe");
+		}
+		else
+		 System.out.println("Customer availabe");*/
 	}//run(-)
 
 }//class
