@@ -24,15 +24,15 @@ public class Runner implements CommandLineRunner {
 				String result=service.insertDetails(cust);
 				System.out.println(result);*/
 		//====================Insert method with custom random Generated id==================
-		/*		Customer cust = new Customer();
-				cust.setId(Generator.randomIdGenerator());
-				cust.setCId(1003);
-				cust.setCName("Shrabani");
-				cust.setCAdd("Odisha");
-				cust.setCBillAmt(1200.0);
-				cust.setPhoneNumber(9658493782L);
-				String result=service.insertDetails(cust);
-				System.out.println(result);*/
+		/*Customer cust = new Customer();
+		cust.setId(Generator.randomIdGenerator());
+		cust.setCId(105);
+		cust.setCName("Ram");
+		cust.setCAdd("Hyderabad");
+		cust.setCBillAmt(1100.0);
+		cust.setPhoneNumber(988747588L);
+		String result=service.insertDetails(cust);
+		System.out.println(result);*/
 		//============================Update method============================
 		/*		Customer cust = new Customer();  //"c44d3ad709c"
 				cust.setId("dada58b6c17");

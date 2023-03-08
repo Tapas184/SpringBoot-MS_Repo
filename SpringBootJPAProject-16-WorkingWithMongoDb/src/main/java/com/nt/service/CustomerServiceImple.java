@@ -19,7 +19,7 @@ public class CustomerServiceImple implements ICustomerService {
 	public String insertDetails(Customer cust) {
 		Customer value = custRepo.insert(cust);
 		if (value != null)
-			return "Details inserted" + value.getId();
+			return "Details inserted " + value.getId();
 		else
 			return "Problem in Details insert";
 	}
