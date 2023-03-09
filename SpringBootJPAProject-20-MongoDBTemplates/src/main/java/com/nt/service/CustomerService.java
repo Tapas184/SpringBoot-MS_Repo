@@ -27,5 +27,12 @@ public class CustomerService implements ICustomerService {
 		    List<Customer> list = template.find(query,Customer.class);
 		return list;
 	}
+	@Override
+	public List<Customer> searchByBillrange(double start, double end) {
+		Query query = new Query();
+		query.addCriteria(Criteria.where("cBillAmt").gte(start).andOperator(Criteria.where("cBillAmt").lte(end)));
+		List<Customer> list =template.find(query, Customer.class);
+		return list;
+	}
 
 }

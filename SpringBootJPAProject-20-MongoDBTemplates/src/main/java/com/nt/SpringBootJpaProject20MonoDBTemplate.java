@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringBootJpaProject19MongoDbCustomQueryApplication {
+public class SpringBootJpaProject20MonoDBTemplate {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootJpaProject19MongoDbCustomQueryApplication.class, args);
+		SpringApplication.run(SpringBootJpaProject20MonoDBTemplate.class, args);
 	}
 
 }

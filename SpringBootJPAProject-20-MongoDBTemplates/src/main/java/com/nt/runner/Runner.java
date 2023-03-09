@@ -23,7 +23,9 @@ public class Runner implements CommandLineRunner {
 				
 			String result =	service.insertDetailsIByCustomer(cust);
 			System.out.println(result);*/
-		service.searchCustomerByAdd("Odisha").forEach(System.out::println);
+		//service.searchCustomerByAdd("Odisha").forEach(System.out::println);
+		
+		//service.searchByBillrange(400.0, 1000.0).forEach(System.out::println);
 	}//run(-)
 
 }//class

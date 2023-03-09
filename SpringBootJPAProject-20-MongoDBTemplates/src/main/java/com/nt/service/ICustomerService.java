@@ -10,4 +10,6 @@ public interface ICustomerService {
 	
 	public List<Customer> searchCustomerByAdd(String add);
 	
+	public List<Customer> searchByBillrange(double start, double end);
+	
 }//Interface
